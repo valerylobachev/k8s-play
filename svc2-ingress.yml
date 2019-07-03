@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: svc2-ingress
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  tls:
+   - secretName: svc2-tls-cert
+  rules:
+  - host: svc2.localhost
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: svc2
+          servicePort: web
