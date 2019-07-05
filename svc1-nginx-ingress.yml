@@ -1,18 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: svc2-nginx-ingress
+  name: svc1-ingress
   annotations:
-    kubernetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
-  tls:
-   - secretName: svc2-tls-cert
   rules:
-  - host: svc2.localhost
+  - host: svc1.localhost
     http:
       paths:
       - path: /
         backend:
-          serviceName: svc2
+          serviceName: svc1
           servicePort: web
+  tls:
+   - secretName: svc1-tls-cert
