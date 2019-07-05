@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: svc1-ingress
+  name: svc1-nginx-ingress
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
