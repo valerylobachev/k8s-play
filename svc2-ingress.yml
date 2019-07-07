@@ -8,7 +8,7 @@ spec:
   tls:
    - secretName: svc2-tls-cert
   rules:
-  - host: svc2.localhost
+  - host: svc2.lobachev.biz
     http:
       paths:
       - path: /
