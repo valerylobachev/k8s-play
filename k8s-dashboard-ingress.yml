@@ -8,7 +8,6 @@ metadata:
 spec:
   rules:
   - host: dashboard.lobachev.biz
-  
     http:
       paths:
       - path: /
