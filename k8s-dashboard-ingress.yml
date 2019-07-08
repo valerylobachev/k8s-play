@@ -8,10 +8,12 @@ metadata:
 spec:
   rules:
   - host: dashboard.lobachev.biz
+  
     http:
       paths:
       - path: /
         backend:
           serviceName: kubernetes-dashboard
           servicePort: 443
-  
+    tls:
+    - secretName: traefik-cert
