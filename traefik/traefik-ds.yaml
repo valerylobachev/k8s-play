@@ -54,6 +54,7 @@ spec:
         - --configfile=/config/traefik.toml
         - --kubernetes
         - --logLevel=DEBUG
+        - --insecureskipverify
 ---
 kind: Service
 apiVersion: v1
